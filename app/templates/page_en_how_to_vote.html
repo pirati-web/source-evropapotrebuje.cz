@@ -1,0 +1,100 @@
+{% extends 'pirati_cz.html' %}
+{% load static %}
+
+{%block headstyle%}
+<style>
+  .intro-img-quick { display: fle; flex-wrap: wrap; }
+  .intro-img-quick > img { flex: 1 1 50%; }
+  .intro-img-quick > img:first { flex: 1 1 100%; }
+
+  .program-blok .header {
+      font-weight: 300; font-size: 2em;
+      margin:1em 0em 0.3em 0;
+      font-family: "Bebas Neue";
+      text-transform: uppercase;
+  }
+
+  .program-blok .topic { font-weight: bold; }
+  .program-blok ol { margin-left: 2em; }
+
+  h3 {font-weight:bold; }
+
+</style>
+{%endblock%}
+{%block body%}
+
+<div class="row">
+  <div class="medium-12 large-10 large-push-1 columns">
+    <section class="o-section o-section--spaceBot">
+      <div class="o-section-inner">
+        <div class="o-section-block" data-equalizer data-equalize-on="medium">
+        <h1 class="main-header">How to vote?
+        </h1>
+
+        <div style="text-align: center">
+        Are you an EU citizen with <b>permanent or temporary residence</b> in the Czech Republic? Then you <b>can vote</b> in the European Parliament elections in the Czech Republic.
+        </div>
+
+<div class='program-blok'>
+<div class="header">How to <span class="pbw pb">register</span>?</div>
+
+<p>Just register on the electoral roll <b>by 14 April 2019</b>.*  </p>
+
+<p>You can <b>apply for enrollment at the municipal office</b> of the municipality where you are registered for permanent or temporary residence. You will need to provide an original or a copy of your residence document, your ID or passport and complete the relevant form.</p>
+
+<p>There is no need to register again if you have already voted in the Czech republic in the previous EP elections.</p>
+
+<p>However, if you voted previously in the Czech Republic in the municipal elections, you must request the data transfer from the Permanent Voter List to the European Parliament electoral roll, again at the municipal office of your registered residence, before 14 April 2019.</p>
+
+<p>During the registration process you will be informed about the location of your polling station. Elections will take place on <b>Friday, May 24 from 2:00 p.m. to 10:00 p.m. and on Saturday, May 25 from 8:00 a.m. to 2:00 p.m.</b></p>
+
+<p>*You must be at least 18 years of age on 25 May 2019 to vote.</p>
+
+<p>If you do not have a permanent or temporary residence in the Czech Republic, you can’t register to vote in the 2019 elections. </p>
+
+
+</div>
+
+<div class='program-blok'>
+<div class="header">How to <span class="pbw pb">vote</span>?</div>
+
+<h3>What should I bring?</h3>
+<p>ID or passport.</p>
+<h3>How do I cast my vote?</h3>
+<ul>
+<li>You will get a set of ballots and an envelope.</li>
+<li>Enter the voting booth and choose only one ballot of your choice. Consider voting for the Pirate party! </li>
+<li>Insert the chosen ballot in the official envelope. </li>
+<li>Once done, leave the voting booth and put the envelope in the ballot box.</li>
+</ul>
+<h3>How do I mark the ballots? </h3>
+<p>You can support up to two specific candidates by circling the number next to their name. If a candidate receives at least 5% of votes for that particular party, she or he moves to the first position and has higher chances of being elected.</p>
+
+</div>
+
+<div class='program-blok'>
+<div class="header">Consider voting for <span class="pbw pb">the Pirate Party</span> !</div>
+<ul>
+<li>Our goal is to protect peace and <b>freedom of movement</b> that the EU provides. </li>
+<li>We aim to keep making it easier for European citizens to <b>travel and work abroad</b>. </li>
+<li>We support further <b>harmonization</b> of social and health insurance systems across the member states to assure less bureaucracy when seeking health care. </li>
+<li>We strive for <b>equal opportunities</b> in the workplace – no discrimination based on nationality, language or gender.</li>
+</ul>
+
+<br/>
+<p>
+<span style="font-size: 1.5em; ">
+Read more about our programme <a href="/en/what-we-want/" class="pbw pb">here</a>.</span>
+</p>
+
+</div>
+
+        </div>
+        <br/><br/>
+        <br/><br/>
+      </div>
+    </section>
+  </div>
+</div>
+
+{%endblock%}

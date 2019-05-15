@@ -1,0 +1,7 @@
+Django==2.0.3
+psycopg2==2.7.4
+django-statici18n==1.7.0
+django-auth-oidc==0.4.5
+pyjwkest==1.4.0
+bleach==2.1.4
+django-anymail==3.0

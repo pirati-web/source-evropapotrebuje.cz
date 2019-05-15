@@ -1,0 +1,186 @@
+{% extends 'pirati_cz.html' %}
+{% load static %}
+
+{%block headstyle%}
+<style>
+  .kandidati { display: flex; flex-wrap: wrap; position: relative; }
+  .kandidati > .person { flex: 1 1 40%; margin: 1em 1em; }
+  .kandidati > .person:first-child { flex: 1 1 100%; margin-bottom: -1em; }
+
+  .person img { float: left; width: 50%; min-width: 100px; max-width:364px; padding: 1em 2em 1em 1em;}
+  .person > .name { margin: 1.5em 0.5em 0em;  font-size: 1.4em; font-family: "Bebas Neue"; font-weight:bold; color: #1a1a1a; }
+  .person > .subtitle { font-family: "Bebas Neue"; font-weight: 300; color: #212121; letter-spacing: 1px; line-height: 1.1em; font-size: 0.9em; }
+  .person > .desc { margin: 1em 0 0 50%; font-style: italic; }
+  .person:first-child > .desc { margin: 1em 0 0 0; }
+  .person > .desc > li { padding: 0 0 0 0.5em; }
+
+  .person.celo img { float: left; width: 50%; min-width: 100px; max-width:364px; padding: 1em;}
+  .person.celo > .name { font-size: 1.7em; }
+
+  .header-cols { display: flex; }
+  .header-cols .hc-left { flex: 1 1 65%; }
+  .header-cols .hc-right { flex: 1 1 30%; margin: 1em; border:1px solid black; padding: 0.5em; margin-top: 2em; }
+  .header-cols .hc-right .act-btn {text-align: right; margin-top: 0.25em; margin-bottom:1em;} 
+  .header-cols .hc-right .act-btn .action-button { padding: 0.25em 1em; margin: 0; margin-right: 1em;} 
+
+  @media screen and (max-width: 25em) {
+      .kandidati > .person > .subtitle { clear: both; text-align: center; }
+  }
+  @media screen and (max-width: 40em) {
+      .kandidati > .person { flex: 1 1 100%; }
+      .kandidati > .person > .name { font-size: 1.5em; margin-top: 1.5em; }
+      hr { display: none }
+  }
+  @media screen and (max-width: 75em) {
+      .kandidati > .person { flex: 1 1 100%; margin-top: 2em;}
+      .kandidati > .person > .name { font-size: 1.5em; }
+      .kandidati > .person > .desc { margin: 1em 0 0 0;} 
+      hr { display: none }
+      .header-cols { display: block; }
+  }
+</style>
+{%endblock%}
+{%block body%}
+
+
+<div class="row">
+  <div class="medium-12 large-12 large-push0 columns">
+    <section class="o-section o-section--spaceBot">
+      <!--
+      <div class="header-cols">
+          <div class="hc-left">
+          -->
+              <div class="o-section-inner" style="text-align: center;">
+                <img src="{% static 'img/celo-kandidatky-pirati-2019.jpg' %}" style="max-height: 400px"/>
+              </div>
+              <div class="o-section-inner" style="text-align: center; margin-top:2em;">
+                <img src="{% static 'img/evropa-potrebuje-piraty.png' %}" style="max-height: 400px" alt="Evropa potřebuje Piráty"/>
+              </div>
+          <!--
+          </div>
+          <div class="hc-right">
+            <p>Volby se blíží - zapojte se!</p>
+            <ul>
+                <li>Vyvěsím pirátskou plachtu a ukážu všem, že volím piráty<br/>
+                    <div class="act-btn">
+                    <a href="https://forms.gle/aXbDt873oZHV8ost7" target="_blank" class="action-button"> Chci zdarma plachtu </a>
+                    </div>
+                </li>
+                <li>Koupím si tričko, tašku, piráské listy a doplňky pro sebe i známé<br/>
+                    <div class="act-btn">
+                    <a href="https://www.piratskyobchod.cz/" class="action-button" target="_blank"> Chci pirátský balíček </a>
+                    </div>
+                </li>
+                <li>Budu volit mimo své bydliště<br/>
+                    <div class="act-btn">
+                    <a href="https://www.facebook.com/events/385368418723441/" class="action-button" target="_blank"> Chci voličský průkaz </a>
+                    </div>
+                </li>
+                <li>Vytisknu si plakát, letáky nebo banner<br/>
+                    <div class="act-btn">
+                    <a href="https://www.pirati.cz/download/#ep2019" class="action-button" target="_blank"> Chci eurovolební grafiku </a>
+                    </div>
+                </li>
+            </ul>
+          </div>
+      </div>
+      -->
+      <br/>
+{%comment%}
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="medium-12 large-6 large-push-3 columns">
+    <section class="o-section o-section--spaceBot">
+      <div class="o-section-inner">
+        <div class="o-section-block" data-equalizer data-equalize-on="medium">
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="row">
+  <div class="medium-12 large-12 large-push0 columns">
+    <section class="o-section o-section--spaceBot">
+{%endcomment%}
+      <div class="o-section-inner">
+        <div class="o-section-block" data-equalizer data-equalize-on="medium">
+            <div class="kandidati">
+            <div class="person celo">
+              <a href="/kandidati/marcel-kolaja/"><img src="{% static 'img/kandidati/title/Kolaja.jpg' %}"/></a>
+              <div class="name"><a href="/kandidati/marcel-kolaja/">Marcel Kolaja</a></div>
+              <div class="subtitle">Manažer v&nbsp;softwarové firmě a&nbsp;expert na&nbsp;opensource technologie
+              </div>
+              <hr>
+              <div class="desc">
+                Rozhodl jsem se kandidovat do Evropského parlamentu, protože si vážím svobody, kterou máme, a&nbsp;nechci o&nbsp;ni přijít. Přeji si mít Evropu, ve které se nám bude dobře žít i&nbsp;dobře dýchat. A&nbsp;ve které bude bezpečno. S&nbsp;pirátským týmem se soustředíme na to, abychom spolu s&nbsp;Evropou prosperovali a&nbsp;nezaostali v&nbsp;konkurenci světových velmocí.
+              </div>
+            </div>
+            <div class="person celo">
+              <a href="/kandidati/marketa-gregorova/"><img src="{% static 'img/kandidati/title/Marketa.jpg' %}"/></a>
+              <div class="name"><a href="/kandidati/marketa-gregorova/">Markéta Gregorová</a></div>
+              <div class="subtitle">Brněnská zastupitelka a&nbsp;předsedkyně Evropské pirátské strany
+              </div>
+              <hr>
+              <div class="desc">
+              Evropská unie není vzdálená instituce žijící svým životem &ndash; jsme to my všichni. Přesto máme někdy problém se orientovat či přímo angažovat v&nbsp;evropské politice. To chci změnit a&nbsp;být mostem mezi občany a&nbsp;Unií. Zjednodušme lidem zapojení do rozhodování o&nbsp;jejich budoucnosti a&nbsp;dojdeme tím k&nbsp;lepším společným řešením a&nbsp;informované společnosti.
+              </div>
+            </div>
+            <div class="person celo">
+              <a href="/kandidati/mikulas-peksa/"><img src="{% static 'img/kandidati/title/Peksa.jpg' %}"/></a>
+              <div class="name"><a href="/kandidati/mikulas-peksa/">Mikuláš Peksa</a></div>
+              <div class="subtitle">Poslanec a&nbsp;místopředseda Pirátů
+              </div>
+              <hr>
+              <div class="desc">
+              Evropské peníze jsou peníze nás všech, každého z&nbsp;půl miliardy Evropanů. Chci, aby evropská daňová politika neumožňovala rozkrádání peněz korporacemi. S&nbsp;Piráty budeme v&nbsp;Evropském parlamentu dohlížet na to, abychom prostředky využívali účelně, stejně jako to už teď děláme ve Sněmovně.
+              </div>
+            </div>
+            <div class="person celo">
+              <a href="/kandidati/lukas-blazej/"><img src="{% static 'img/kandidati/title/Blazej.jpg' %}"/></a>
+              <div class="name"><a href="/kandidati/lukas-blazej/">Lukáš Blažej</a></div>
+              <div class="subtitle">Protikorupční aktivista a&nbsp;odborník na&nbsp;právo životního prostředí
+              </div>
+              <hr>
+              <div class="desc">
+              Životnímu prostředí se věnuji dlouhodobě, ale teprve na stáži v&nbsp;Evropském parlamentu jsem poznal, jak důležitou roli v&nbsp;něm hrají europoslanci. Vymírání hmyzu, mikroplasty ve vodě nebo vysychání půdy &ndash; žádný z&nbsp;těchto problémů nelze vyřešit na úrovni jediného státu. S&nbsp;Piráty k&nbsp;nim přistupujeme racionálně na základě vědeckých  poznatků a&nbsp;s&nbsp;vaší pomocí v&nbsp;tom budeme pokračovat i&nbsp;v&nbsp;europarlamentu.
+              </div>
+            </div>
+            <div class="person celo">
+              <a href="/kandidati/jana-kolarikova/"><img src="{% static 'img/kandidati/title/Jana.jpg' %}"/></a>
+              <div class="name"><a href="/kandidati/jana-kolarikova/">Jana Koláříková</a></div>
+              <div class="subtitle">HR manažerka a&nbsp;specialistka na&nbsp;rozvojovou spolupráci
+              </div>
+              <hr>
+              <div class="desc">
+              Chci ovlivňovat evropskou politiku, protože mi není lhostejná budoucnost. Pro naše děti by mělo být i&nbsp;nadále snadné cestovat a&nbsp;pracovat, kde se jim zachce. Naopak se mi příčí, aby ve 21. století a&nbsp;v&nbsp;době nadprodukce museli lidé řešit existenční problémy. Pro nás neexistují občané druhé kategorie. Všichni mají nárok na férové podmínky.
+              </div>
+            </div>
+            </div>
+          </div>
+      </div>
+      <br/>
+        <div class="row">
+          <div class="medium-12 large-12 columns">
+            <section class="o-section o-section--spaceBot">
+              <div class="o-section-inner">
+              &nbsp;
+              </div>
+            </section>
+          </div>
+        </div>
+        <div id='do_register_button' style="    text-align: center;">
+        {%comment%}
+            <a href="/jak-volit/" style="width: 350px; margin-top: 10px; text-align: center; padding: 22px; font-size: 22px; background-color: #5c81b8;border-color: #5c81b8; color: white;" class="c-cta-button c-cta-button--primary">
+            Jak volit do EU&thinsp;?
+            </a>
+            {%endcomment%}
+            <a href="/zapoj-se/" class="action-button"> Chci pomoci s&nbsp;kampaní <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+            </a>
+        </div>
+    </section>
+  </div>
+</div>
+
+{%endblock%}

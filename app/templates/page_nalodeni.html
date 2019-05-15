@@ -1,0 +1,92 @@
+{% extends 'pirati_cz.html' %}
+{% load static %}
+
+{%block headstyle%}
+<style>
+  .moznosti { display: flex; flex-wrap: wrap;
+  }
+  .moznosti > .panel { flex: 1 1 40%;
+    margin: 1em 0 0 0;
+    padding: 3.5em 2em 0 0;
+    min-width: 200px;
+    position: relative;
+  } 
+  .moznosti > .panel:nth-child(odd) { padding-left:0em; padding-right:3em;}
+  .moznosti > .panel:nth-child(even) { padding-left:3em; padding-right:0em;}
+  @media screen and (max-width: 40em) {
+      .moznosti > .panel { flex: 1 1 100%; }
+      .moznosti > .panel { padding: 2em 0em !important; }
+
+  }
+  @media screen and (min-width: 40em) {
+      .donate-btn {
+          display: block; bottom: 0px; position: absolute; left: 0;
+      }
+  }
+  .social-networks { list-style-type:none; margin:0; }
+  .social-icon {
+
+    width: 40px;
+    display: inline-block;
+    text-align: center;
+    height: 40px;
+    vertical-align: text-top;
+
+}
+</style>
+{%endblock%}
+{%block body%}
+
+<div class="row">
+  <div class="medium-12 large-10 large-push-1 columns">
+    <section class="o-section o-section--spaceBot">
+      <div class="o-section-inner">
+        <div class="o-section-block" data-equalizer data-equalize-on="medium">
+        <h1 class="main-header">
+            <span class="pbw"><span class="pbw pb">Pir</span>á<span class="pbw pb">ti&nbsp;t</span>ě</span>&nbsp;potřebují</span>
+        </h1>
+        </div>
+      </div>
+      <br/>
+      <div class="o-section-inner">
+        <div class="o-section-block" data-equalizer data-equalize-on="medium">
+<div style="text-align: center">
+Fandíš Pirátům a&nbsp;záleží ti na výsledku letošních voleb? Připoj se k&nbsp;nám na palubu!
+</div>
+
+<div class="moznosti">
+    <div class="panel">
+        <h2><span class="pbw"><span class="pbw pb">Pro</span>č</span> se připojit</h2>
+        <p>Volby do Evropského parlamentu mají bohužel tradičně v Česku nejmenší volební účast. V roce 2014 se jich zúčastnilo pouhých 18,20 % lidí. Pokud by se volební účast mírně zvedla, stačilo by nám k cílovému volebnímu výsledku, aby asi 330 000 z našich voličů přišlo k volbám. To znamená, že pomoc každého z vás může změnit volební výsledek!</p>
+    </div>
+
+    <div class="panel">
+        <h2><span class="pbw pb">Dej</span> nám vědět</h2>
+        <p>Volby do Evropského parlamentu mají bohužel tradičně v&nbsp;Česku nejmenší volební účast. V&nbsp;roce 2014 se jich zúčastnilo pouhých 18,20 % lidí. Pokud by se volební účast mírně zvedla, stačilo by nám k&nbsp;cílovému volebnímu výsledku, aby asi <b>330 000</b> z&nbsp;našich voličů přišlo k&nbsp;volbám. To znamená, že pomoc každého z&nbsp;vás může změnit volební výsledek!</p>
+
+        <p>Dej nám svoji e-mailovou adresu a&nbsp;my ti napíšeme, jak se můžeš do kampaně zapojit i&nbsp;ty. Budeme tě průběžně informovat o&nbsp;tom, jak je možné pomoct. Děkujeme!</p>
+
+        <div class="ab-pos">
+            <a href="https://nalodeni.pirati.cz/eurovolby-2019" target="_blank" class="action-button">Pomůžu s&nbsp;kampaní</a>
+        </div>
+    </div>
+ 
+</div>
+
+          </div>
+      </div>
+      <br/>
+        <div class="row">
+          <div class="medium-12 large-12 columns">
+            <section class="o-section o-section--spaceBot">
+              <div class="o-section-inner">
+              &nbsp;
+              </div>
+            </section>
+          </div>
+        </div>
+    </section>
+  </div>
+</div>
+
+{%endblock%}

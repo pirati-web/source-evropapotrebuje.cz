@@ -1,0 +1,149 @@
+{% extends 'pirati_cz.html' %}
+{% load static %}
+
+{%block headstyle%}
+<style>
+  .moznosti { display: flex; flex-wrap: wrap;
+  }
+  .moznosti > .panel { flex: 1 1 40%;
+    margin: 1em 0 0 0;
+    padding: 3.5em 2em 0 0;
+    min-width: 200px;
+    position: relative;
+  } 
+  .moznosti > .panel:nth-child(odd) { padding-left:0em; padding-right:3em;}
+  .moznosti > .panel:nth-child(even) { padding-left:3em; padding-right:0em;}
+  @media screen and (max-width: 40em) {
+      .moznosti > .panel { flex: 1 1 100%; }
+      .moznosti > .panel { padding: 2em 0em !important; }
+
+  }
+  @media screen and (min-width: 40em) {
+      .donate-btn {
+          display: block; bottom: 0px; position: absolute; left: 0;
+      }
+  }
+</style>
+{%endblock%}
+{%block body%}
+
+<div class="row">
+  <div class="medium-12 large-10 large-push-1 columns">
+    <section class="o-section o-section--spaceBot">
+      <div class="o-section-inner">
+        <div class="o-section-block" data-equalizer data-equalize-on="medium">
+        <h1 class="main-header">
+            <span class="pbw"><span class="pbw pb">Pir</span>á<span class="pbw pb">ti&nbsp;t</span>ě</span>&nbsp;potřebují</span>
+        </h1>
+        </div>
+      </div>
+      <br/>
+      <div class="o-section-inner">
+        <div class="o-section-block" data-equalizer data-equalize-on="medium">
+<div style="text-align: center">
+Fandíš Pirátům a&nbsp;záleží ti na výsledku letošních voleb? Přidej se k&nbsp;nám na palubu!
+</div>
+
+<div class="moznosti">
+    <div class="panel">
+        <h2><span class="pbw"><span class="pbw pb">P</span>ř<span class="pb pbw">isp</span>ě<span class="pbw pb">j</span></span> na kampaň</h2>
+
+        <p>Státní peníze neutrácíme za drahé politické kampaně. Místo toho je používáme pro zaplacení kvalitních expertů a&nbsp;analytiků, aby se nám dařilo co nejlépe plnit program. 
+        Veškeré naše výdaje až na úroveň faktur si můžete přehledně prohlédnout v&nbsp;našem <b><a href="https://piroplaceni.pirati.cz/">transparentním systému</a></b>.
+        </p>
+        <iframe width="400px" height="220px" src="https://www.youtube.com/embed/DOhuUKK4V6Q" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br/>
+        <p>Budeme moc rádi, pokud se rozhodnete přispět nám na kampaň do Evropského parlamentu. Každá částka pomůže! Děkujeme.</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <div class="ab-pos donate-btn">
+            <a href="https://dary.pirati.cz/evropskyparlament" target="_blank" class="action-button">Poslat dar</a>
+        </div>
+        {%comment%}
+        <div class="ab-pos donate-btn">
+            <a href="http://www.startovac.cz/projekty/evropa-potrebuje-piraty/" target="_blank" class="action-button">Jdu na Startovač</a>
+        </div>
+        {%endcomment%}
+    </div>
+
+    <div class="panel">
+        <h2><span class="pbw pb">Zapoj se</span> do kampaně</h2>
+        <p>Volby do Evropského parlamentu mají bohužel tradičně v&nbsp;Česku nejmenší volební účast. V&nbsp;roce 2014 se jich zúčastnilo pouhých 18,20 % lidí. Pokud by se volební účast mírně zvedla, stačilo by nám k&nbsp;cílovému volebnímu výsledku, aby asi <b>330 000</b> z&nbsp;našich voličů přišlo k&nbsp;volbám. To znamená, že pomoc každého z&nbsp;vás může změnit volební výsledek!</p>
+
+        <p>Dej nám svoji e-mailovou adresu a&nbsp;my ti napíšeme, jak se můžeš do kampaně zapojit i&nbsp;ty. Budeme tě průběžně informovat o&nbsp;tom, jak je možné pomoct. Děkujeme!</p>
+
+        <div class="ab-pos">
+            <a href="https://nalodeni.pirati.cz/eurovolby-2019/" target="_blank" class="action-button">Pomůžu s&nbsp;kampaní</a>
+        </div>
+    </div>
+ 
+    <div class="panel">
+        <h2><span class="pbw"><span class="pbw pb">Uka</span>ž</span> všem, že volíš</h2>
+        <p>Vyvěs si na dům, balkon nebo svůj podnik plachtu s&nbsp;pirátskou grafikou a&nbsp;ukaž všem sousedům, že v&nbsp;evropských volbách podporuješ Piráty. Vybrat si můžeš ze sedmi variant a&nbsp;plachtu ti zdarma přivezeme až domů. Čím víc budeme vidět, tím víc lidí přijde k volbám. Jde o&nbsp;každý hlas!</p>
+
+        <div class="ab-pos">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLchMgJQRvX63YIZtKD_4a2rRNWvUIANHq2pvzMff5ZoXQlA/viewform?usp=sf_link" target="_blank" class="action-button">Vyvěsím plachtu</a>
+        </div>
+    </div>
+ 
+    <div class="panel">
+        <h2>Staň se <span class="pbw"><span class="pbw pb">aktivn</span>í<span class="pbw pb">m voli</span>č<span class="pbw pb">em</span></span></h2>
+        <p>Na našem pirátském eshopu si kup balíček aktivního voliče, kterým nám pomůžeš být vidět. Cena pokryje náklady na výrobu a&nbsp;poštovné. Děkujeme za podporu!</p>
+
+        <div class="ab-pos">
+            <a href="https://www.piratskyobchod.cz/" target="_blank" class="action-button">Budu aktivním voličem</a>
+        </div>
+    </div>
+ 
+    <div class="panel">
+        <h2>Sleduj nás a&nbsp;<span class="pbw"><span class="pbw pb">sd</span>í<span class="pb pbw">lej</span></span></h2>
+        <p>Sleduj naše sociální sítě, ať ti neunikne nic z&nbsp;kampaně. Budeme rádi za sdílení! </p>
+
+        <ul class="social-networks">
+        <li><a href="https://www.facebook.com/ceska.piratska.strana/" rel="noopener" target="_blank"><span class="social-icon"><svg width="8" height="16" viewBox="0 0 8 16" xmlns="http://www.w3.org/2000/svg" data-v-21fcefc8=""><title data-v-21fcefc8="">Facebook</title> <path d="M1.61 3.092v2.199H0v2.688h1.61v7.988h3.31V7.979h2.22s.207-1.289.308-2.698H4.932V3.443c0-.275.36-.644.717-.644H7.45V0h-2.45C1.529 0 1.61 2.69 1.61 3.092z" fill="#000" fill-rule="nonzero" data-v-21fcefc8=""></path></svg>
+            </span>Facebook</a>
+        <li><a href="https://www.twitter.com/PiratskaStrana" rel="noopener" target="_blank"><span class="social-icon"><svg width="19" height="15" viewBox="0 0 19 15" xmlns="http://www.w3.org/2000/svg" data-v-21fcefc8=""><title data-v-21fcefc8="">Twitter</title> <path d="M18.434 1.772c-.679.3-1.407.504-2.172.595a3.797 3.797 0 0 0 1.663-2.09 7.623 7.623 0 0 1-2.403.918 3.782 3.782 0 0 0-6.444 3.448A10.736 10.736 0 0 1 1.284.69a3.753 3.753 0 0 0-.511 1.9A3.78 3.78 0 0 0 2.455 5.74a3.782 3.782 0 0 1-1.713-.475v.047A3.785 3.785 0 0 0 3.775 9.02a3.83 3.83 0 0 1-.997.133 3.63 3.63 0 0 1-.712-.07 3.783 3.783 0 0 0 3.532 2.626 7.587 7.587 0 0 1-4.696 1.616c-.305 0-.606-.018-.902-.052a10.689 10.689 0 0 0 5.796 1.701c6.957 0 10.759-5.761 10.759-10.758l-.013-.49a7.551 7.551 0 0 0 1.892-1.953z" fill="#000" fill-rule="nonzero" data-v-21fcefc8=""></path></svg>
+            </span>Twitter</a>
+        <li><a href="https://www.instagram.com/pirati.cz/" rel="noopener" target="_blank"><span class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 169.063 169.063" data-v-21fcefc8=""><title data-v-21fcefc8="">Instagram</title> <g fill="#000" data-v-21fcefc8=""><path d="M122.406 0H46.654C20.929 0 0 20.93 0 46.655v75.752c0 25.726 20.929 46.655 46.654 46.655h75.752c25.727 0 46.656-20.93 46.656-46.655V46.655C169.063 20.93 148.133 0 122.406 0zm31.657 122.407c0 17.455-14.201 31.655-31.656 31.655H46.654C29.2 154.063 15 139.862 15 122.407V46.655C15 29.201 29.2 15 46.654 15h75.752c17.455 0 31.656 14.201 31.656 31.655v75.752z" data-v-21fcefc8=""></path> <path d="M84.531 40.97c-24.021 0-43.563 19.542-43.563 43.563 0 24.02 19.542 43.561 43.563 43.561s43.563-19.541 43.563-43.561c0-24.021-19.542-43.563-43.563-43.563zm0 72.123c-15.749 0-28.563-12.812-28.563-28.561 0-15.75 12.813-28.563 28.563-28.563s28.563 12.813 28.563 28.563c0 15.749-12.814 28.561-28.563 28.561zM129.921 28.251c-2.89 0-5.729 1.17-7.77 3.22a11.053 11.053 0 0 0-3.23 7.78c0 2.891 1.18 5.73 3.23 7.78 2.04 2.04 4.88 3.22 7.77 3.22 2.9 0 5.73-1.18 7.78-3.22 2.05-2.05 3.22-4.89 3.22-7.78 0-2.9-1.17-5.74-3.22-7.78-2.04-2.05-4.88-3.22-7.78-3.22z" data-v-21fcefc8=""></path></g></svg>
+            </span>Instagram</a>
+        <li><a href="https://www.youtube.com/user/CeskaPiratskaStrana" rel="noopener" target="_blank"><span class="social-icon"><svg width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg" data-v-21fcefc8=""><title data-v-21fcefc8="">YouTube</title> <path d="M7.988 9.586V3.974c1.993.938 3.536 1.843 5.36 2.82-1.505.834-3.367 1.77-5.36 2.792m11.103-8.403c-.344-.453-.93-.805-1.553-.922-1.833-.348-13.267-.349-15.099 0-.5.094-.945.32-1.328.673C-.5 2.429.005 10.452.393 11.75c.164.562.375.968.64 1.235.343.352.812.594 1.351.703 1.51.312 9.284.486 15.122.047a2.62 2.62 0 0 0 1.39-.712c1.49-1.49 1.388-9.962.195-11.841" fill="#000" fill-rule="evenodd" data-v-21fcefc8=""></path></svg>
+            </span>YouTube</a>
+        </ul>
+    </div>
+
+    {%comment%}
+    <div class="panel">
+        <h2>Buď <span class="pbw"><span class="pbw pb">hl</span>í<span class="pb pbw">dac</span>í<span class="pbw pb">m&nbsp;psem</span></span> voleb</h2>
+        <p> I&nbsp;letos bude třeba dohlédnout na regulérnost voleb do Evropského parlamentu 24.-25. května 2019. Členem okrskové volební komise může být občan České republiky nebo občan jiného členského státu, který v&nbsp;den složení slibu (probíhá zpravidla na prvním zasedání komise) dosáhl věku nejméně 18 let a&nbsp;není kandidátem pro volby do Evropského parlamentu. </p>
+        <p>Členství ve volební komisi je odměňováno částkou&nbsp;1800&nbsp;Kč.</p>
+
+        <div class="ab-pos">
+            <a href="https://ovk.pirati.cz" target="_blank" class="action-button">Chci do volební komise</a>
+        </div>
+    </div>
+    {%endcomment%}
+</div>
+
+
+<br/>
+<br/>
+
+
+          </div>
+      </div>
+      <br/>
+        <div class="row">
+          <div class="medium-12 large-12 columns">
+            <section class="o-section o-section--spaceBot">
+              <div class="o-section-inner">
+              &nbsp;
+              </div>
+            </section>
+          </div>
+        </div>
+    </section>
+  </div>
+</div>
+
+{%endblock%}

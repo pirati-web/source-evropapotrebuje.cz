@@ -1,0 +1,49 @@
+{% extends 'pirati_cz.html' %}
+{% load static %}
+
+{%block headstyle%}
+<style>
+  .main-header { font-weight: bold; }
+  .subtitle { font-family: "Bebas Neue"; font-weight: 300; color: #212121;
+        letter-spacing: 1px; line-height: 1.1em;
+        font-size: 0.6em;
+  }
+  .detail-img {
+      float: right;
+      text-align: center;
+      max-width: 300px;
+      padding: 0 2em;
+  }
+  .detail-img.big2 {
+      max-width: 400px;
+      margin-bottom: 1em;
+  }
+
+  @media screen and (max-width: 40em) {
+      .detail-img { float: none;
+            margin: 1em auto 2em;
+            padding: 0 1em;
+            }
+  }
+  @media screen and (max-width: 75em) {
+  }
+</style>
+{%endblock%}
+{%block body%}
+
+<div class="row">
+  <div class="medium-12 large-12 large-push-0 columns">
+    <section class="o-section o-section--spaceBot">
+      <div class="o-section-inner">
+        <div class="o-section-block" data-equalizer data-equalize-on="medium">
+          {% include person_text %}
+            <div class="" style="margin-top: 2em;">
+                <a href="/kandidati/#{{person}}" class="action-button">Zpět na kandidáty</a>
+            </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+{%endblock%}

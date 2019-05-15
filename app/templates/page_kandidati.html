@@ -1,0 +1,644 @@
+{% extends 'pirati_cz.html' %}
+{% load static %}
+
+{%block headstyle%}
+<style>
+  .kandidati { display: flex; flex-wrap: wrap; position: relative; }
+  .kandidati > .person { flex: 1 1 50%; margin: 1em 0 0 0; }
+  .kandidati > .person.celo { flex: 1 1 100%; }
+
+  .person { display: flex; }
+  .person > div:first-child { flex: 1 1 20% }
+  .person > div { flex: 1 1 80% }
+
+  .person img { min-width: 100px; max-width:150px; padding: 1em 2em 1em 1em;}
+  .person .name { margin: 0.5em 0.5em 0.25em 0;  font-size: 1.4em; font-family: "Bebas Neue"; font-weight: bold; }
+  .person .desc-wrap {display: inline-block; vertical-align: top; }
+  .person .desc { margin: 0; list-style-type: none; }
+  .person .desc > li {
+        background: url('/static/img/list-icon.jpg') no-repeat 0px 0.3em transparent;
+        background-size: auto auto;
+        background-size: auto auto;
+        list-style-type: none;
+        margin: 0;
+        padding: 0px 0px 1px 25px;
+        vertical-align: middle;
+        background-size: 1em;
+  }
+  .person.celo .desc > li { max-width: unset; }
+  .person .desc > li div { display: inline-block; }
+
+  .person.celo img { min-width: 100px; max-width:200px; padding: 1em;}
+  .person.celo .name { font-size: 1.7em; }
+
+  .subtitle { font-family: "Bebas Neue"; font-weight: 300; color: #212121;
+        letter-spacing: 1px; line-height: 1.1em;
+        font-size: 1em; margin: -0.5em 0 0.5em 0;
+  }
+
+  @media screen and (max-width: 40em) {
+      .kandidati .person { display: block; margin-bottom: 3em; }
+  }
+  @media screen and (max-width: 40em) {
+      .kandidati > .person { flex: 1 1 100%; margin-top: 2em; }
+      .kandidati > .person .name { font-size: 1.5em; }
+      .kandidati > .person .desc { clear: both; }
+  }
+  @media screen and (max-width: 75em) {
+      .kandidati > .person { flex: 1 1 100%; margin-top: 2em;}
+      .kandidati > .person .name { font-size: 1.5em; }
+  }
+</style>
+{%endblock%}
+{%block body%}
+
+<div class="row">
+  <div class="medium-12 large-12 large-push-0 columns">
+    <section class="o-section o-section--spaceBot">
+      <div class="o-section-inner">
+        <div class="o-section-block" data-equalizer data-equalize-on="medium">
+          <h1 class="main-header">
+            <span class="pbw"><span class="pbw pb">Kandid</span>á<span class="pbw pb">ti</span></span>&nbsp;pirátů do europarlamentu
+          </h1>
+        </div>
+      </div>
+      <br/>
+      <div class="o-section-inner">
+        <div class="o-section-block" data-equalizer data-equalize-on="medium">
+            <div class="kandidati">
+            <div class="person celo" id="marcel-kolaja">
+              <div>
+              <a href="/kandidati/marcel-kolaja/">
+              <img src="{% static 'img/kandidati/Kolaja.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/marcel-kolaja/">
+              <div class="name">1. Marcel Kolaja<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                <div class="subtitle">manažer v&nbsp;softwarové firmě</div>
+              <ul class="desc">
+                <li>expert na technologie open source a&nbsp;bojovník za svobodný internet</li>
+                <li>spoluzaložil spolek Otevřená města</li>
+                <li>bývalý místopředseda České pirátské strany</li>
+              </ul>
+              </div>
+              </div>
+            </div>
+            <div class="person celo" id="marketa-gregorova">
+              <div>
+              <a href="/kandidati/marketa-gregorova/">
+              <img src="{% static 'img/kandidati/Marketa.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/marketa-gregorova/">
+              <div class="name">2. Markéta Gregorová<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                <div class="subtitle">brněnská zastupitelka</div>
+              <ul class="desc">
+                <li>předsedá Evropské pirátské straně</li>
+                <li>pracovala jako marketingová a&nbsp;PR poradkyně</li>
+                <li>podporuje Erasmus+ a&nbsp;programy pro mladé</li>
+              </ul>
+              </div>
+              </div>
+            </div>
+            <div class="person celo" id="mikulas-peksa">
+              <div>
+              <a href="/kandidati/mikulas-peksa/">
+              <img src="{% static 'img/kandidati/Mikulas.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/mikulas-peksa/">
+              <div class="name">3. Mikuláš Peksa<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                <div class="subtitle">poslanec</div>
+              <ul class="desc">
+                <li>místopředseda České pirátské strany</li>
+                <li>ve Sněmovně působí v&nbsp;zahraničním výboru a&nbsp;výboru pro evropské záležitosti</li>
+                <li>vystudoval biofyziku a&nbsp;pracoval jako výzkumník a&nbsp;programátor</li>
+              </ul>
+              </div>
+              </div>
+            </div>
+            <div class="person celo" id="lukas-blazej">
+              <div>
+              <a href="/kandidati/lukas-blazej/">
+              <img src="{% static 'img/kandidati/Blazej.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/lukas-blazej/">
+              <div class="name">4. Lukáš Blažej<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                <div class="subtitle">ústecký zastupitel a&nbsp;odborník na&nbsp;právo životního prostředí</div>
+              <ul class="desc">
+                <li>získal Cenu za odvahu Nadačního fondu proti korupci za rozkrytí řady kauz města Ústí nad Labem </li>
+                <li>opakovaně zastupoval české environmentální neziskové organizace při jednání na evropské úrovni</li>
+                <li>založil spolek Ústecké šrouby, který podporuje ochranu přírody a&nbsp;krajiny</li>
+              </ul>
+              </div>
+              </div>
+            </div>
+            <div class="person celo" id="jana-kolarikova">
+              <div>
+              <a href="/kandidati/jana-kolarikova/">
+              <img src="{% static 'img/kandidati/Jana.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/jana-kolarikova/">
+              <div class="name">5. Jana Koláříková<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">HR manažerka se&nbsp;schopností budovat kvalitní týmy</div>
+              <ul class="desc">
+                <li>vedoucí personálního odboru Pirátů</li>
+                <li>věnovala se rozvojové vzdělávací práci v&nbsp;Malawi</li>
+                <li>má zkušenosti z neziskové organizace pracující s drogově závislými</li>
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="ondrej-kolek">
+              <div>
+              <a href="/kandidati/ondrej-kolek/">
+              <img src="{% static 'img/kandidati/Kolek.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/ondrej-kolek/">
+              <div class="name">6. Ondřej Kolek <span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">technologický vývojář a&nbsp;chemik</div>
+              <ul class="desc">
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="nina-spitalnikova">
+              <div>
+              <a href="/kandidati/nina-spitalnikova/">
+              <img src="{% static 'img/kandidati/Nina.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/nina-spitalnikova/">
+              <div class="name">7. Nina Špitálníková <span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">koreanistka, autorka a&nbsp;členka výzkumného centra Peace Research Center Prague</div>
+              <ul class="desc">
+              {%comment%}
+                <li>Členka výzkumného centra Peace Research Center Prague
+                <li>Koreanistka
+                <li>Produkční a&nbsp;fundraiser Crossclubu
+                <li>Autorka knih o&nbsp;KLDR
+              {%endcomment%}
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="eva-ticha">
+              <div>
+              <a href="/kandidati/eva-ticha/">
+              <img src="{% static 'img/kandidati/Ticha.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/eva-ticha/">
+              <div class="name">8. Eva Tichá<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">ekonomka, protikorupční aktivistka, zastupitelka na Praze&nbsp;6</div>
+              <ul class="desc">
+              {%comment%}
+                <li>Pirátská zastupitelka městské části Praha 6
+                <li>Obchodní manažerka v&nbsp;soukromé firmě
+                <li>Zakladatelka iniciativy Praha 6&nbsp;neplastuje
+              {%endcomment%}
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="lukas-lev-cervinka">
+              <div>
+              <a href="/kandidati/lukas-lev-cervinka/">
+              <img src="{% static 'img/kandidati/Cervinka.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/lukas-lev-cervinka/">
+              <div class="name">9. Lukáš Lev Červinka<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">ústavní právník a&nbsp;analytik Asociace pro mezinárodní otázky</div>
+              <ul class="desc">
+              {%comment%}
+                <li>ústavní právník
+                <li>expert na mezinárodní bezpečnost
+                <li>poradce poslance Jana Lipavského
+                <li>analytik Asociace pro mezinárodní otázky
+              {%endcomment%}
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="michal-gill">
+              <div>
+              <a href="/kandidati/michal-gill/">
+              <img src="{% static 'img/kandidati/Gill.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/michal-gill/">
+              <div class="name">10. Michal Gill<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">Historik, překladatel a&nbsp;mediální poradce</div>
+              <ul class="desc">
+              {%comment%}
+                <li>Člen předsednictva Pirate Parties International
+                <li>Asistent místostarosty a&nbsp;zastupitelů na Praze 4
+                <li>Odpovídač kanceláře Primátora hl. města Praha
+                <li>Politický aktivista
+              {%endcomment%}
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="jiri-hoskovec">
+              <div>
+              <a href="/kandidati/jiri-hoskovec/">
+              <img src="{% static 'img/kandidati/Hoskovec.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/jiri-hoskovec/">
+              <div class="name">11. Jiří Hoskovec<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">Forenzní specialista se zaměřením na finanční zločin</div>
+              <ul class="desc">
+              {%comment%}
+                <li>ústavní právník
+                <li>expert na mezinárodní bezpečnost
+                <li>poradce poslance Jana Lipavského
+                <li>analytik Asociace pro mezinárodní otázky
+              {%endcomment%}
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="david-frantisek-wagner">
+              <div>
+              <a href="/kandidati/david-frantisek-wagner/">
+              <img src="{% static 'img/kandidati/Wagner.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/david-frantisek-wagner/">
+              <div class="name">12. David František Wagner<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">Didaktik, poslanecký poradce, zakladatel kampaně Zachraňte internet</div>
+              <ul class="desc">
+              {%comment%}
+                <li>Poradce pirátských poslanců
+                <li>Didaktik a&nbsp;historik
+                <li>Autor popularizačních článků o&nbsp;české i&nbsp;mezinárodní historii
+                <li>Zakladatel spolku Rolling pro rozvoj zážitkových vzdělávacích her
+              {%endcomment%}
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="michal-salomoun">
+              <div>
+              <a href="/kandidati/michal-salomoun/">
+              <img src="{% static 'img/kandidati/Salomoun.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/michal-salomoun/">
+              <div class="name">13. Michal Šalomoun<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">advokát se zaměřením na autorské právo</div>
+              <ul class="desc">
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="magdalena-dankova">
+              <div>
+              <a href="/kandidati/magdalena-dankova/">
+              <img src="{% static 'img/kandidati/Dankova.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/magdalena-dankova/">
+              <div class="name">14. Magdalena Daňková <span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">učitelka, zastupitelka města Plzeň</div>
+              <ul class="desc">
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="matej-sandor">
+              <div>
+              <a href="/kandidati/matej-sandor/">
+              <img src="{% static 'img/kandidati/Sandor.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/matej-sandor/">
+              <div class="name">15. Matej Šandor<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">Právník a&nbsp;manažer</div>
+              <ul class="desc">
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="linda-matuskova">
+              <div>
+              <a href="/kandidati/linda-matuskova/">
+              <img src="{% static 'img/kandidati/Matuskova.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/linda-matuskova/">
+              <div class="name">16. Linda Matušková<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">Podnikatelka a&nbsp;fotografka</div>
+              <ul class="desc">
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="petr-jirman">
+              <div>
+              <a href="/kandidati/petr-jirman/">
+              <img src="{% static 'img/kandidati/Jirman.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/petr-jirman/">
+              <div class="name">17. Petr Jirman<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">Auditor Evropské komise</div>
+              <ul class="desc">
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="dan-lestina">
+              <div>
+              <a href="/kandidati/dan-lestina/">
+              <img src="{% static 'img/kandidati/Lestina.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/dan-lestina/">
+              <div class="name">18. Dan Leština<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">Výzkumník a&nbsp;doktorand v&nbsp;oboru tropické ekologie</div>
+              <ul class="desc">
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="frantisek-kopriva">
+              <div>
+              <a href="/kandidati/frantisek-kopriva/">
+              <img src="{% static 'img/kandidati/Kopriva.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/frantisek-kopriva/">
+              <div class="name">19. František Kopřiva<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">Poslanec PSP ČR</div>
+              <ul class="desc">
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="hynek-melichar">
+              <div>
+              <a href="/kandidati/hynek-melichar/">
+              <img src="{% static 'img/kandidati/Melichar.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/hynek-melichar/">
+              <div class="name">20. Hynek Melichar<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">Univerzitní pedagog mezinárodních vztahů a&nbsp;bezpečnosti</div>
+              <ul class="desc">
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="jiri-jansa">
+              <div>
+              <a href="/kandidati/jiri-jansa/">
+              <img src="{% static 'img/kandidati/Jansa.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/jiri-jansa/">
+              <div class="name">21. Jiří Jansa<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">Pojistný matematik a&nbsp;analytik</div>
+              <ul class="desc">
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="jan-licka">
+              <div>
+              <a href="/kandidati/jan-licka/">
+              <img src="{% static 'img/kandidati/Licka.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/jan-licka/">
+              <div class="name">22. Jan Lička<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">Manažer logistiky průmyslové výroby</div>
+              <ul class="desc">
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="michael-polak">
+              <div>
+              <a href="/kandidati/michael-polak/">
+              <img src="{% static 'img/kandidati/Polak.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/michael-polak/">
+              <div class="name">23. Michael Polák<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">Provozovatel optických a&nbsp;bezdrátových sousedských sítí,</div>
+              <ul class="desc">
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="ladislav-koubek">
+              <div>
+              <a href="/kandidati/ladislav-koubek/">
+              <img src="{% static 'img/kandidati/Koubek.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/ladislav-koubek/">
+              <div class="name">24. Ladislav Koubek<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">Expert OSN na rozvojovou a&nbsp;humanitární pomoc</div>
+              <ul class="desc">
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="pavel-tauer">
+              <div>
+              <a href="/kandidati/pavel-tauer/">
+              <img src="{% static 'img/kandidati/Tauer.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/pavel-tauer/">
+              <div class="name">25. Pavel Tauer<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">Specialista na informační technologie</div>
+              <ul class="desc">
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="simon-barczi">
+              <div>
+              <a href="/kandidati/simon-barczi/">
+              <img src="{% static 'img/kandidati/Barczi.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/simon-barczi/">
+              <div class="name">26. Šimon Barczi<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">Poradce v&nbsp;oblasti inovací pro start-upy</div>
+              <ul class="desc">
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="milos-vlach">
+              <div>
+              <a href="/kandidati/milos-vlach/">
+              <img src="{% static 'img/kandidati/Vlach.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/milos-vlach/">
+              <div class="name">27. Miloš Vlach<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">Společník v&nbsp;softwarové firmě</div>
+              <ul class="desc">
+              </ul>
+              </div>
+              </div>
+            </div>
+
+            <div class="person" id="jiri-lehejcek">
+              <div>
+              <a href="/kandidati/jiri-lehejcek/">
+              <img src="{% static 'img/kandidati/Lehejcek.jpg' %}"/>
+              </a>
+              </div>
+              <div>
+              <a href="/kandidati/jiri-lehejcek/">
+              <div class="name">28. Jiří Lehejček<span class="links"></span></div>
+              </a>
+              <div class="desc-wrap">
+                  <div class="subtitle">Univerzitní pedagog dendrochronologie arktické tundry</div>
+              <ul class="desc">
+              </ul>
+              </div>
+              </div>
+            </div>
+            <div class="person" >
+            </div>
+
+            </div>
+          </div>
+      </div>
+      <br/>
+        <div class="row">
+          <div class="medium-12 large-12 columns">
+            <section class="o-section o-section--spaceBot">
+              <div class="o-section-inner">
+              &nbsp;
+              </div>
+            </section>
+          </div>
+        </div>
+        <div style="text-align: center;">
+            <a href="/zapoj-se/" class="action-button">
+            Chci pomoci s&nbsp;kampaní
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+            </a>
+        </div>
+    </section>
+  </div>
+</div>
+
+{%endblock%}

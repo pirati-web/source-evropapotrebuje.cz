@@ -1,0 +1,91 @@
+{% extends 'pirati_cz.html' %}
+{% load static %}
+
+{%block headstyle%}
+<style>
+  .intro-img-quick { display: fle; flex-wrap: wrap; }
+  .intro-img-quick > img { flex: 1 1 50%; }
+  .intro-img-quick > img:first { flex: 1 1 100%; }
+
+  .program-blok .header {
+      font-weight: 300; font-size: 2em;
+      margin:1em 0em 0.3em 0;
+      font-family: "Bebas Neue";
+      text-transform: uppercase;
+  }
+
+  .program-blok .topic { font-weight: bold; }
+  .program-blok ol { margin-left: 2em; }
+
+</style>
+{%endblock%}
+{%block body%}
+
+<div class="row">
+  <div class="medium-12 large-10 large-push-1 columns">
+    <section class="o-section o-section--spaceBot">
+      <div class="o-section-inner">
+        <div class="o-section-block" data-equalizer data-equalize-on="medium">
+        <h1 class="main-header">Jak volit?
+        </h1>
+
+        <div style="text-align: center">
+        Volby do Evropského parlamentu jsou důležité. I tak k nim ale chodí nejméně lidí. Přitom to není vůbec složité.
+        </div>
+
+<div class='program-blok'>
+<div class="header"><span class="pbw pb">Kdo</span> může volit?</div>
+<ul>
+<li>Abyste mohli volit, musí vám být nejpozději 25. 5. 2019 osmnáct let.</li>
+<li>Volit mohou i občané Evropské unie, kteří mají v ČR alespoň 45 dnů trvalý nebo přechodný pobyt.
+        <!--  Návod, jak se registrovat k volbám jako cizinec-občan EU, najdete tady. -->
+</li>
+<li><a href="/sk/ako-volit" style="font-weight: bold; text-decoration: underline;">Som Slovák a chci voliť v ČR</a>.</li>
+<li>Pokud pobýváte v zahraničí, volit na ambasádách tentokrát nejde.</li>
+</ul>
+</div>
+
+<div class='program-blok'>
+<div class="header"><span class="pbw pb">Jak</span> volit?</div>
+<p>Volební lístky dostanete do svých schránek v místě vašeho trvalého bydliště. Tam také půjdete volit. Pokud sadu volebních lístků neobdržíte poštou, můžete si ji vyžádat přímo ve volební místnosti.</p>
+<p>Potřebovat budete <b>platný</b> doklad totožnosti (např. občanský průkaz, cestovní pas).</p>
+<p>Po příchodu do volební místnosti a ověření totožnosti obdržíte úřední obálku. Volební lístek upravíte za plentou, vložíte do obálky a vhodíte do urny. A máte odvoleno! </p>
+</div>
+
+<div class='program-blok'>
+<div class="header">Proč má <span class="pbw pb">smysl</span> kroužkovat?</div>
+<p>
+Na volebním lístku můžete zároveň zakroužkovat <b>nejvýše dva</b> preferované kandidáty. Pokud některý z kandidátů získá od voličů dané strany alespoň <b>5 % hlasů</b>, přesouvá se na první pozici, a má tak větší šanci na zvolení. Do Evropského parlamentu tak můžete dostat i kandidáta, který je níže na kandidátce.</p>
+</div>
+
+<div class='program-blok'>
+<div class="header">Jak si vyřídit <span class="pbw"><span class="pbw pb">voli</span>č<span class="pbw pb">sk</span>ý</span> průkaz?</div>
+<p>
+Nejprve je třeba podat žádost (vzor formuláře najdete např. <a href="https://img.cncenter.cz/ras-cz/3-origin-5420028.pdf">zde</a>) na obecním úřadě, kde máte hlášené trvalé bydliště. Učinit tak můžete 4 způsoby:
+<ul>
+<li>Osobně – stihnout to musíte do 22. května 2019.</li>
+<li>Poštou – žádost s úředně ověřeným podpisem musí na úřad dorazit nejpozději 7 dnů před volbami. Posílejte je zhruba do 13. května 2019.
+<li>Přes datovou schránku – žádost můžete podat nejpozději do 15. května 2019.
+{%comment%}
+<li>S Piráty – vyřídíme vám žádost o voličský průkaz v terénu <b>bez nutnosti chodit na úřad</b>. Akce budou probíhat v Praze, v Brně, v Ostravě, v Olomouci, v Plzni a v Liberci na přelomu dubna a května. Sledujte tuto <a href="https://www.facebook.com/events/385368418723441/" style="text-decoration: underline;" target="_blank">facebookovou událost</a>, aby vám neunikly místa a časy.</li>
+{%endcomment%}
+</ul>
+
+<p><b>Úřad vám váš voličský průkaz doručí buď poštou, nebo si jej můžete vyzvednout osobně.</b> Vyzvednout nebo převzít jej může také osoba s plnou mocí. Úřad vám vydá voličský průkaz nejdříve 9. května 2019.</p>
+<p>Pak už můžete směle volit! S sebou tedy potřebujete doklad totožnosti a samozřejmě váš voličský průkaz. Nezapomeňte, že voličský průkaz platí pouze na jedny volby!</p>
+</div>
+
+
+        </div>
+        <br/><br/>
+        <br/><br/>
+        <div  style="text-align: center;">
+            <a href="/zapoj-se/" class="action-button"> Chci pomoci s&nbsp;kampaní <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+            </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+{%endblock%}

@@ -1,0 +1,61 @@
+{% extends 'pirati_cz.html' %}
+{% load static %}
+
+{%block body%}
+<style>
+  .intro-img-quick { display: fle; flex-wrap: wrap; }
+  .intro-img-quick > img { flex: 1 1 50%; }
+  .intro-img-quick > img:first { flex: 1 1 100%; }
+</style>
+
+<div class="row">
+  <div class="medium-12 large-8 large-push-2 columns">
+    <section class="o-section o-section--spaceBot">
+      <div class="o-section-inner" style="text-align: center;">
+        <img src="{% static 'img/celo-kandidatky-pirati-2019.png' %}" style="max-height: 400px"/>
+      </div>
+      <div class="o-section-inner">
+        <div class="o-section-block" data-equalizer data-equalize-on="medium">
+          <h1 style="font-size: 3.0rem; margin:0.7em 0 0.25em 0; text-align: center;">Evropa potřebuje Piráty</h1>
+          <p>
+          </p>
+        </div>
+      </div>
+      <br/>
+      <div class="o-section-inner">
+        <div class="o-section-block" data-equalizer data-equalize-on="medium">
+            <img src="{% static 'img/intro/1_kolaja.jpg' %}"/>
+            <br/>
+            <div class="intro-img-quick">
+            <img src="{% static 'img/intro/2_gregorova.jpg' %}"/>
+            <img src="{% static 'img/intro/3_peksa.jpg' %}"/>
+            <img src="{% static 'img/intro/4_blazej.jpg' %}"/>
+            <img src="{% static 'img/intro/5_kolarikova.jpg' %}"/>
+            </div>
+
+          </div>
+      </div>
+      <br/>
+        <div class="row">
+          <div class="medium-12 large-12 columns">
+            <section class="o-section o-section--spaceBot">
+              <div class="o-section-inner">
+              &nbsp;
+              </div>
+            </section>
+          </div>
+        </div>
+        <div id='do_register_button' style="    text-align: center;">
+            <a href="/jak-volit/" style="width: 350px; margin-top: 10px; text-align: center; padding: 22px; font-size: 22px; background-color: #5c81b8;border-color: #5c81b8; color: white;" class="c-cta-button c-cta-button--primary">
+            Jak volit do EU&thinsp;?
+            </a>
+            <a href="/zapojte-se/" style="width: 350px; margin-top: 10px; text-align: center; padding: 22px; font-size: 22px; background-color: #5cb85c;border-color: #5cb85c; color: white;" class="c-cta-button c-cta-button--primary">
+            Chci pomoci s kampaní
+            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+            </a>
+        </div>
+    </section>
+  </div>
+</div>
+
+{%endblock%}
