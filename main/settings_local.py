@@ -19,16 +19,16 @@ BASE_DOMAIN = "kouzelnakrabicka.cz"
 ##
 #   Database setup
 ##
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'piratieuweb',
-        'USER': 'piratieuweb',
-        'PASSWORD': '',
-        'HOST': '',          # Set to empty string for localhost.
-        'PORT': '',          # Set to empty string for default.
-    }
-}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'piratieuweb',
+#        'USER': 'jitka',
+#        'PASSWORD': '',
+#        'HOST': '',          # Set to empty string for localhost.
+#        'PORT': '',          # Set to empty string for default.
+#    }
+#}
 
 ##
 # Email setup
